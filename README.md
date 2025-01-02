@@ -87,3 +87,24 @@ Reactも未だ興味関心は高いですが、ポートフォリオを作成す
 
 応用情報はこれから計画を立てる予定（書籍は昨年の分は揃えている）ですが、
 もしここ4,5ヶ月で応用情報や基本情報を取得したい方がいらっしゃいましたら、一緒に勉強会でもできればいいなと思っています😊
+
+
+# Rails基礎 ch.17
+
+<aside>
+<img src="/icons/gem_red.svg" alt="/icons/gem_red.svg" width="40px" />
+
+**`gem 'kaminari'`**
+
+gem 'kaminari'は、Ruby on Rails アプリケーションでページネーション機能を簡単に実装するためのライブラリです。この gem を使うと、大量のデータを効率的に分割し、ユーザーにページングされたビューを提供することができます。gem 'kaminari' はカスタマイズ性が高く、デフォルトの設定を簡単に変更できるほか、Bootstrap などの CSS フレームワークと統合してスタイリングを行うことも可能です。
+
+</aside>
+
+<aside>
+<img src="/icons/gem_red.svg" alt="/icons/gem_red.svg" width="40px" />
+
+**`gem 'bootstrap5-kaminari-views'`**
+
+gem 'bootstrap5-kaminari-views'は、gem 'kaminari' と Bootstrap 5 を組み合わせてページネーションのスタイルを簡単に適用するためのgemです。このgemを使用すると、Bootstrap 5のデザインガイドラインに従ったページネーションリンクを自動的に生成することができます。gem 'kaminari' のデフォルトのビューテンプレートを置き換え、Bootstrap 5 のクラスを適用した美しいページネーションリンクを作成します。
+
+</aside>
