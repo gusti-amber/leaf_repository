@@ -1,3 +1,18 @@
+## - Day: 28 -
+##### 学習時間： 8.0h（12ポモ）
+##### :small_orange_diamond:内容
+- Rails基礎 ch.10,11の途中
+
+##### :small_orange_diamond:振り返り
+朝7時に起きれたけど睡眠時間足りなかったかもしれない（0:30寝）
+コロナやインフルの方ちらほら見かけるので今日はゆっくり休養を取ることにします :sleeping: （RUNTEQ総選挙は残ってたらアーカイブで！）
+
+##### :small_orange_diamond:次回の課題
+- Rails基礎続き
+- Javascript基礎続き
+
+
+
 ## - Day: 29 -
 ##### 学習時間： 4.3h（8ポモ）
 ##### :small_orange_diamond:内容
