@@ -1,3 +1,38 @@
+## - Day: 29 -
+##### 学習時間： 4.3h（8ポモ）
+##### :small_orange_diamond:内容
+- Rails基礎 ch.11
+
+##### :small_orange_diamond:振り返り
+ch.11でSelenium::WebDriver::Error::JavascriptError:に遭遇したけど質問見て無事解決
+午後は出かけてたから時間少なめだったけど午前で8ポモできたということでヨシ！としよう
+明日からまたがんばろ〜 :reverse_parrot: 
+
+##### :small_orange_diamond:次回の課題
+- Rails基礎続き
+- Javascript基礎続き
+
+
+
+## - Day: 30 -
+##### 学習時間： 9.1h（12ポモ）
+##### :small_orange_diamond:内容
+- Rails基礎 ch.12,13
+- Javascript基礎 ch.2
+
+##### :small_orange_diamond:振り返り
+日中、某G社からレンタルしてるルーターが1,2分毎くらいに落ちるトラブルもあってDiscordで入退室を繰り返すおかしな人になっていたかもしれない😅（アラート音が毎分鳴ってた
+肝心のカリキュラムの方は順調でRails基礎はデバッグとコミットに注意しながら進めてた
+今回の章だとデバッグは`pry-byebug`gemを薦められてたけど個人的には`better_errors`gemの方がブラウザでデバッグできてUIも好みだったから複雑な気分.....
+コミットの方はタイミングが難しくて今の所は追加も変更も一ファイルごとにコミットしてるけど、この調子だと時間がかかるのでどうしたものか考え中
+後のデバッグのことを考えるとコミットは慎重に行った方がいいと思うので、難しそうな箇所だけこまめにコミットが良いのかもしれない
+
+##### :small_orange_diamond:次回の課題
+- Rails基礎 ch.14,15
+- Javascript基礎 ch.3
+
+
+
 ## - Day: 31 -
 ##### 学習時間： 7.9h（13ポモ）
 ##### :small_orange_diamond:内容
