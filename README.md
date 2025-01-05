@@ -1,3 +1,20 @@
+## - Day: 23 -
+#### **学習時間**： 2.8h（5ポモ）
+
+##### :small_orange_diamond:**内容**
+*   Rails基礎ch.5
+
+##### :small_orange_diamond:**振り返り**
+家具の解体作業＆組み立てがあったので今日はもうおやすみにします :sleeping: 
+
+##### :small_orange_diamond:**次回の課題**
+*   React（Progate）
+*   Rails基礎
+*   自己紹介文の続き
+*   RUNTEQ総選挙のアプリを触る
+
+
+
 ## - Day: 24 -
 ##### 学習時間： 1.6h（3ポモ）
 ##### :small_orange_diamond:内容
