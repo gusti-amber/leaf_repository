@@ -1,3 +1,55 @@
+## - Day: 26 -
+##### 学習時間： 3.0h（7ポモ）
+##### :small_orange_diamond:内容
+- Rails基礎 ch.8
+- TypeScriptで学ぶReact ch.1
+
+##### :small_orange_diamond:振り返り
+Rails基礎は毎日着実に進んでいるのでバックエンドの学習はこの調子で続ければ良いと思う。
+一方、フロントエンドはJavascriptにまだ慣れていないので基礎編に加えて別の教材でも勉強したい。
+入学前にRailsTutorialという教材を使っていてそのサイトに[Javascriptの資料](https://railstutorial.jp/javascript/hello_world)もあったのでそちらで学習するのが良いかもしれない。
+（Railsの教材はクオリティが高かったのでここの教材は期待できそう）
+
+それと以前にも書いたけどRUNTEQ総選挙のアプリを触っていてReactを使ったアプリケーションに憧れてたのでReactの教材も探していた。
+最近はクラスコンポーネントではなくReactHooksを使った関数コンポーネントを使うことが主流のようなので、
+ReactHooksを扱っている下の教材の中から選んで進めていこうと思う。
+
+- Typescriptで学ぶReact（RUNTEQカリキュラム）
+- [mosya React](https://mosya.dev/react/dashboard)
+- [【最新ver対応済】モダンJavaScriptの基礎から始める挫折しないためのReact入門](https://www.udemy.com/course/modern_javascipt_react_beginner/?couponCode=NVDPROD20#instructor-1)
+
+
+
+##### :small_orange_diamond:次回の課題
+- Rails基礎続き
+- Javascript基礎
+- RUNTEQ総選挙のアプリを触る
+
+
+
+## - Day: 27 -
+##### 学習時間： 3.8h（5ポモ）
+##### :small_orange_diamond:内容
+- Rails基礎 ch.9
+- Javascript基礎 ch.1
+
+##### :small_orange_diamond:振り返り
+React勉強するためにJavascriptは欠かせないと思って勉強。
+
+昨日は交流会に参加して無事顔見せ（というより声見せ？）できてよかった。
+勉強会の話を出したけれど、今のところ応用情報（+基本情報）、RSpex、React（+Javascript）のうち、
+どれかを題材にした勉強会を1,2ヶ月以内に始められたらいいなと思ってます。
+（基本情報持ってるので応用情報の勉強会が始めやすそう。RSpex、Reactは僕も初心者なのでまずは自分で進めたい。）
+構想段階ですが、応用情報なら受験日程が来年の4月のはずなので3,4ヶ月くらいのスケジュールを組んで、
+毎週指定の章を読んで、当日は進捗報告・復習・解らなかった部分を相談みたいな流れで進めればなと思います。
+
+##### :small_orange_diamond:次回の課題
+- Rails基礎続き
+- Javascript基礎続き
+- RUNTEQ総選挙のアプリを触る
+
+
+
 ## - Day: 28 -
 ##### 学習時間： 8.0h（12ポモ）
 ##### :small_orange_diamond:内容
