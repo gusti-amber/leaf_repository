@@ -447,3 +447,41 @@ copilotに送るプロンプトは再利用する可能性が高いので、プ�
 
 
 
+
+
+
+## - Day: 51 - (2024/1/8)
+##### 学習時間： 4.2h（8ポモ）
+##### :small_orange_diamond:内容
+- Rails基礎 ch.20 途中
+- AP試験の計画
+- コード×AIーソフトウェア開発者のための生成AI実践入門 ch.8,9 途中
+
+##### :small_orange_diamond:振り返り
+やはりRails基礎 ch.20は手強い....😱
+いさみんさんにgem`sorcery`の解説Notionいただいてパスワードリセットの問題はなんとか解決した☺️（ありがとうございます...!!）
+ch.20ではgemの公式ドキュメントを一から確認する必要があるので、
+READMEやwikiが長すぎて読めない場合は、copilotに渡すことで要約解説してくれるから便利！（こちらが許可すればコードも書いてくれる）
+最後のrspecテストでまだ3つエラーが残っている（多分i18n関係）ので、明日解消しようと思う。
+
+今日は昼間に外の用事があって、帰りがけにジュンク堂に寄りました。
+GitやWeb知識系で気になってたのが何冊かあって、書店で読み比べて結局三冊ほど購入することに決めました。（一部はkindleで買おうと思います。）
+
+- [［改訂新版］プロになるためのWeb技術入門](https://www.amazon.co.jp/%EF%BC%BB%E6%94%B9%E8%A8%82%E6%96%B0%E7%89%88%EF%BC%BD%E3%83%97%E3%83%AD%E3%81%AB%E3%81%AA%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AEWeb%E6%8A%80%E8%A1%93%E5%85%A5%E9%96%80-%E5%B0%8F%E6%A3%AE-%E8%A3%95%E4%BB%8B-ebook/dp/B0DN641NSP/ref=tmm_kin_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.-EAW7167kKJlZK-qk-jNrNq6ESnqcP_NT2a5In9OAH_SYi3c_HfUPUH0ZBPieHUoP_TzDX6OayUCjQ1ZxLqcBAYQvw1FPF_wK9LpaHofiLR38aaLSIDjLcQL_3sueAyEL0Piddjp3K44B5xv7UpHy8P0v44jrQzB1Q77vqk7og4Sin_op4KoXTV4wBjLDdrhclyfraQBbDnVy-PRgckoSP4qUCU6lxAIjchEPiw_U67fghjVt7IAR9ILjH_siQlj749spNueJwl-MWJEPRvKPheGLgn1fJ6XOtSN-O7BxuxcYIE0aHfA6GLhbqDUrNULLhOm8wnONI2Fd4cEkSKFIm3P627QoCFFYvzNGqkpr2FRhIzIJWmKuqX8wiw6EasQEMtf1wBh1DnxxOr8ACmiXp6YZOqNEMnPwDk3AuxLQi8CDAMzqK5vwjtgHjANHWZD.Z2T6KXMDSNQM8vJ0TC5vpp8tS5yLyGuEVAAMzAxHoxc&qid=1736329034&sr=8-1)
+この本は前書も有名でしたが、ちょうど先月この改訂版が発売されました。
+web知識を補える本といえば「Webを支える技術」が有名だと思いますが、書店で読んでみてこの内容を実践の場で使う時期は遠そうだなと思ったので、
+より具体的にサンプルコードを参考に学べるこちらの書籍にしました。
+中盤でJavascriptの解説（歴史や文法など）が載っているのもポイント高いです！（フロントエンドもついでに学べてお得！）
+今の所kindle版は44%ポイント還元されるみたいです！
+
+- [実務レベルでわかる／使いこなせるようになる Git入門コマンドライン演習80](https://www.amazon.co.jp/%E5%AE%9F%E5%8B%99%E3%83%AC%E3%83%99%E3%83%AB%E3%81%A7%E3%82%8F%E3%81%8B%E3%82%8B%EF%BC%8F%E4%BD%BF%E3%81%84%E3%81%93%E3%81%AA%E3%81%9B%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%AA%E3%82%8B-Git%E5%85%A5%E9%96%80%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B3%E6%BC%94%E7%BF%9280-%E4%BA%95%E4%B8%8A%E9%A1%A7%E5%9F%BA-ebook/dp/B09VNRQPTV/ref=tmm_kin_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.p5nmvSdZBV3cfFoiMhKfnTMOj9WigGqyOM2pjDSRSBaM7oD7u5lT6PIrG2Vue2MhBWcIfxhmjNEyGOnOExvpGexGM8zRNR6KKWaMWWeEgRChHY1iJZTZPXSvrxSYyS7LLLbHoygn9ELusip33XlGciBoWp70LbgV7TRlZjcBzUgNz67gC2bAUqRT-8xdzGz-JsltJYGNR7COmsE0FuGbfG1mg5m_vMLf0tIxiNkq3qtcoX5WqmpP-e3Jadb9yyAZVlelsDFG0BKC3PIQQfimeNT9eIjM9P5oKfKBrckTNEi3EgtLeoUK625m4TXewx53VkQZadB_ut31UA4VcK5uCd0eqk1d-yj8Qb3mzPP2eJwQERwbb438SzmQFxv3dUg0.n7zGTuBn0jWX_jpwoY7GhAcbxpuCqEcMT0-IRhaV-Iw&qid=1736328606&sr=8-1)
+gitだと図式やイラスト多めの書籍がありましたが、そういった書籍はネット上で無料公開されているもの（サル先生のgit入門など）が多そうだったので、
+演習しながら学べるこちらの書籍にしようと思いました。
+
+- [2025　応用情報技術者　午後問題の重点対策 重点対策書シリーズ](https://www.amazon.co.jp/2025-%E5%BF%9C%E7%94%A8%E6%83%85%E5%A0%B1%E6%8A%80%E8%A1%93%E8%80%85-%E5%8D%88%E5%BE%8C%E5%95%8F%E9%A1%8C%E3%81%AE%E9%87%8D%E7%82%B9%E5%AF%BE%E7%AD%96-%E9%87%8D%E7%82%B9%E5%AF%BE%E7%AD%96%E6%9B%B8%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-%E5%B0%8F%E5%8F%A3%E9%81%94%E5%A4%AB-ebook/dp/B0DNFCZGYN/ref=tmm_kin_swatch_0?_encoding=UTF8&dib_tag=se&dib=eyJ2IjoiMSJ9.jkT6BBJUjAdOztrheF0mEM796WQY5mO0hieZ1y5tuEqHjc6RBHF_dRhj8z_1kn-jbgoxJ7rMECBmKweoi-0KL30RRlurvU93g7OfYHRX5Js2Nezl64V6V9Xz9zMEGKaxhrTkJjvvcnjPHpHXJ-1WyuXq5dt9-DsmcA6TBGHp2xPkcITqXTrbAjmdewN55h9ELFTbDdl4BmL0TxnZEsjDNeX8EJaPllE-QL5FFvhciQqH9zGsdNsAZh5PJEOBUUdAg1-Rh6PWd9I4e7QOwGHQeH-BzKaxbOTWt3sOPZ5LjQBQqpfOXRawqFzHXSwJM5o6DFxe05yDE9FJSTAgoWcHm_s-IBkwRQ1HdIVQ1Xf5ZquhORsNO6KfXmlyLMEO-iabGsL103Rq1kq1NBxzTcDkTw7KM2t_5fuV9WMAlXeVtOQza39oHUgS8mDjwZ4e3Rbc.UVHJvl7K0AP-NpPj7wtTgtAzf9uD8UFnI9CSe5fjtsI&qid=1736328792&sr=8-1)
+いくつかのQiita記事で勧められていた本です。
+午後試験は記述形式で例年別の問題が出るようなので、より幅広く午後試験を対策するのであれば過去問道場+この本がいいかなと思いました。
+
+##### :small_orange_diamond:次回の課題
+- Rails基礎 ch.20倒す💪
+- AP試験の計画（具体的に）
