@@ -854,3 +854,265 @@ RUNTEQはバックグラウンドが異なる人が集まってくるから自�
 ##### :small_orange_diamond:次回の課題
 - Rspec ch.3
 - APの勉強（過去問道場解く、キタミ式眺める）
+
+
+
+
+
+
+
+
+
+
+# RSpec入門・演習 ch.2
+
+<aside>
+<img src="/icons/sync_red.svg" alt="/icons/sync_red.svg" width="40px" />
+
+### **model specとは**
+
+RSpecにおけるmodel specは、アプリケーションのモデル（データベースのテーブルやオブジェクトのクラスなど）の振る舞いをテストするため利用します。
+
+具体的なテストケースでは、モデルのインスタンスを作成し、属性を設定して保存したり、バリデーションエラーが発生する条件をテストしたりします。
+
+そして、期待される結果と実際の結果を比較して、テストが成功したかどうかを判断します。
+
+modelの処理が正しく機能しているかどうか、予期した振る舞いを確認するために非常に重要です。
+
+</aside>
+
+<aside>
+<img src="/icons/sync_red.svg" alt="/icons/sync_red.svg" width="40px" />
+
+### **テストのグループ化**
+
+RSpecでは、テストコードを組織化して書くためにdescribe、context、itというブロックを使用します。
+
+- describedescribeブロックは、テスト対象のクラスやメソッドなどのグループを定義します。テストコード内で複数のdescribeブロックを作成することができ、階層構造を持たせることもできます。下記のようにコードを書きます。
+
+```ruby
+describe "クラス名やメソッドの処理内容などを記載する" do
+  ...
+end
+
+```
+
+describeブロック内には、そのクラスやメソッドに関連する複数のテストケースを含めることができます。
+
+- contextcontextブロックは、特定の状況や条件に基づいてテストをグループ化するために使用されます。describeブロックの内部に記述されることが一般的です。下記のようにコードを書きます。
+
+```ruby
+describe "クラス名やメソッドの処理内容などを記載する" do
+  context "状況や条件などを記載する" do
+    ...
+  end
+end
+
+```
+
+contextブロックを使うことで、テストの可読性が向上し、どのような状況や条件でテストを行っているのかが明確になります。
+
+- ititブロックは、特定のテストケースを定義し、1つのitブロックは1つのテストケースを表します。下記のようにコードを書きます。
+
+```ruby
+describe "クラス名やメソッドの処理内容などを記載する" do
+  context "状況や条件などを記載する" do
+    it "テストケースの説明" do
+      ...
+    end
+  end
+end
+
+```
+
+itブロック内には、テストの実行や結果の検証が記述されます。
+
+</aside>
+
+<aside>
+<img src="/icons/sync_red.svg" alt="/icons/sync_red.svg" width="40px" />
+
+### **`expect`検証メソッド**
+
+値を検証するために**expect**メソッドを利用します。
+
+基本的な構文は下記のようになります。
+
+```ruby
+expect(テスト対象の値).to マッチャー(期待する値)
+```
+
+</aside>
+
+<aside>
+<img src="/icons/sync_red.svg" alt="/icons/sync_red.svg" width="40px" />
+
+### マッチャー
+
+RSpecのマッチャーは、テストコード内で期待される値と実際の値を比較し、テスト結果を判定するために使用されます。
+
+よく利用されるマッチャーをみていきます。
+
+- `eq`マッチャーは、2つの値が等しいかどうかを比較します。具体的な使い方は以下の通りです
+
+```ruby
+expect(テスト対象の値).to eq(期待する値)
+
+```
+
+modelに記載した処理による実際の値と期待する値を比較して、等しい場合にテストが成功します。
+
+- `be`マッチャーは、真偽値のtrue/falseやオブジェクトが特定の条件を満たすかどうかを判定します。具体的な使い方は以下の通りです。
+
+```ruby
+expect(テスト対象の値).to be true # be true : 値がtrueであるかどうかをチェックします
+expect(テスト対象の値).to be false # be false : 値がfalseであるかどうかをチェックします
+expect(テスト対象の値).to be_nil # be_nil : 値がnilであるかどうかをチェックします
+
+```
+
+- `be_empty`マッチャーは、配列や文字列、ハッシュなどが空であるかどうかを検証します。具体的な使い方は以下の通りです。
+
+```ruby
+expect(テスト対象の配列).to be_empty
+expect(テスト対象の文字列).to be_empty
+expect(テスト対象のハッシュ).to be_empty
+
+```
+
+配列が空の場合や、文字列が空の場合、ハッシュが空の場合にテストが成功します。
+
+要素や文字列、キーと値のペアが存在しない状態を表します。
+
+- `be_valid`マッチャーは、オブジェクトがバリデーションに通るかどうかを検証します。主にActive Recordモデルのテストで使用されます。具体的な使い方は以下の通りです。
+
+```ruby
+expect(テスト対象のオブジェクト).to be_valid
+
+```
+
+オブジェクトがバリデーションに通ってる場合にテストが成功します。
+
+オブジェクトの属性値が必要なバリデーションルールを満たしているので、エラーが発生していない状態です。
+
+`be_empty`と組み合わせて、エラーメッセージの格納する配列が空であることも追加でテストとして記載するとより正確なテストを書くことができます。
+
+```ruby
+expect(テスト対象のオブジェクト).to be_valid
+expect(テスト対象のオブジェクトのエラーの配列).to be_empty
+
+```
+
+- `be_invalid`マッチャーは、`be_valid`の逆でオブジェクトがバリデーションに通らない状態であることを検証するために使用されます。具体的な使い方は以下の通りです。
+
+```ruby
+expect(object).to be_invalid
+
+```
+
+objectがバリデーションに合格しない場合にテストが成功します。
+
+オブジェクトの属性値が必要なバリデーションルールを満たしていないので、エラーが発生している状態です。
+
+他にも様々なマッチャーがあるので、用途に応じて調べてみてください。
+
+</aside>
+
+<aside>
+<img src="/icons/sync_red.svg" alt="/icons/sync_red.svg" width="40px" />
+
+### `FactoryBot.define`**factory botでのデータの定義方法**
+
+Factory Botでは、オブジェクトのファクトリ（工場）を定義します。
+
+一度ファクトリを定義しておくと、テストケース内でそのファクトリを使用してオブジェクトを簡単に作成できます。例として、以下のようにUserモデルのファクトリを定義します。
+
+```ruby
+FactoryBot.define do
+  factory :user do
+    name { "らんてくん" }
+    sequence(:email) { |n| "runteq_#{n}@example.com" }
+    age { 3 }
+  end
+end
+
+```
+
+この定義では、:userという名前のファクトリが作成され、name、email、ageという属性を持つユーザーオブジェクトを生成します。
+
+</aside>
+
+<aside>
+<img src="/icons/sync_red.svg" alt="/icons/sync_red.svg" width="40px" />
+
+### **factory botのデータの作成**
+
+factory botで定義したデータを利用するには下記のような方法があります。
+
+- `create`メソッドデータベースに実際にオブジェクトを保存するメソッドです。データベースにレコードを作成してからそれを利用するようなテストケースで使用されます。
+
+```ruby
+user = FactoryBot.create(:user)
+or
+user = create(:user)
+
+```
+
+またデータの中身を書き換えたい場合は下記のように上書きしてデータを作成してデータベースに保存することもできます。
+
+```ruby
+user = FactoryBot.create(:user, name: "RUNTEQ")
+or
+user = create(:user, name: "RUNTEQ")
+
+```
+
+- `build`メソッドデータベースに保存せずにオブジェクトを作成するためのメソッドです。`build`メソッドを使用すると、作成したオブジェクトはデータベースに保存されず、一時的なオブジェクトとしてのみ存在します。このメソッドは通常、データベースに保存する必要がない場合や、関連オブジェクトの作成など一時的なオブジェクトを作成する場合に使用されます。
+
+```ruby
+user = FactoryBot.build(:user)
+or
+user = build(:user)
+
+```
+
+`create`と同じようにデータの中身を上書きして作成することもできます。
+
+```ruby
+user = FactoryBot.build(:user, name: "RUNTEQ")
+or
+user = build(:user, name: "RUNTEQ")
+
+```
+
+</aside>
+
+<aside>
+<img src="/icons/sync_red.svg" alt="/icons/sync_red.svg" width="40px" />
+
+### **テストケースの洗い出し**
+
+まずはtask.rbのmodelファイルから、何に対してどんなバリデーションを記載しているか確認します。
+
+```ruby
+  validates :title, presence: true, uniqueness: true
+  validates :status, presence: true 
+```
+
+上記からバリデーション処理をしている確認して成功パターンと失敗パターンを考えていきます。
+
+**失敗パターンから考えていくと成功パターンが書きやすくなります。**
+
+### **失敗パターン**
+
+- titleがない場合にバリデーションが機能してinvalidになるか
+- statusがない場合にバリデーションが機能してinvalidになるか
+- titleが被った場合にuniqueのバリデーションが機能してinvalidになるか
+
+### **成功パターン**
+
+失敗パターンに当てはまらない場合に成功になります。
+
+- 設定したすべてのバリデーションが機能しているか（titleとstatusがあること、titleが被ってないこと）
+- titleが被らない場合にバリデーションエラーが起きないか
+</aside>
