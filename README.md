@@ -864,6 +864,215 @@ RUNTEQはバックグラウンドが異なる人が集まってくるから自�
 
 
 
+
+
+
+
+
+
+# Rails基礎 ch.21
+
+<aside>
+<img src="/icons/gem_red.svg" alt="/icons/gem_red.svg" width="40px" />
+
+### **enum とは何か？**
+
+enum（列挙型）は、Rails でデータベースの値を意味のある名前に関連付けるための方法です。数値を直接使用する代わりに、名前付きの定数を使用してコードの可読性とメンテナンス性を向上させます。
+
+enum は主にモデルで使用されます。以下は、Post モデルにおける enum の使用例です。
+
+```
+class Post < ApplicationRecord
+  enum status: { unpublish: 0, publish: 10 }
+end
+
+```
+
+上記のコードでは、status カラムが定義され、unpublish（非公開）と publish（公開）という2つのステータスが定義されています。これにより、status カラムには数値（0 または 10）が格納されますが、コード上では unpublish や publish という名前で扱うことができます。
+
+### **enum を利用した操作**
+
+enum を定義することで、いくつかの便利なメソッドが自動的に追加されます。
+
+**enum の設定と取得**
+
+status に :publish を設定すると、データベースには 10 が格納されますが、コード上では publish として扱われます。
+
+```ruby
+post = Post.new
+post.status = :publish
+puts post.status #=> "publish"
+```
+
+**enum によるスコープ**
+
+enum は自動的にスコープを生成します。
+
+```ruby
+Post.unpublish #=> 非公開状態のPostのみを取得
+Post.publish #=> 公開状態のPostのみを取得
+```
+
+これにより、特定のPostを簡単に検索することができます。
+
+**enum の値の確認**
+
+特定のレコードが特定の役割を持つかどうかを確認するメソッドも自動的に追加されます。
+
+```ruby
+post = Post.new(status: :unpublish)
+post.unpublish? #=> true
+post.publish? #=> false
+```
+
+このように、status が unpublish かどうかを確認するためのメソッドが利用できます。
+
+</aside>
+
+<aside>
+<img src="/icons/code_yellow.svg" alt="/icons/code_yellow.svg" width="40px" />
+
+### **JavaScript パッケージ**
+
+JavaScript パッケージは、特定の機能を実装したコードの集まりで、他のプロジェクトで簡単に再利用できるようにしたものです。例えば、Web ページの見た目を整えるためのライブラリや、データを処理するためのツールなどがあります。これらは多くの場合、npm（Node Package Manager）や yarn というツールを使って管理します。
+
+</aside>
+
+<aside>
+<img src="/icons/wrench_gray.svg" alt="/icons/wrench_gray.svg" width="40px" />
+
+### **MVP（Minimum Viable Product）**
+
+MVP（Minimum Viable Product）とは、ユーザーにとって価値のある最小限のプロダクトのことで、考えた機能からサービスが成立する限界まで、機能を削ぎ落とされたプロダクトのことを指します。
+
+今回の Rails 基礎で作成したアプリケーションを元に MVP を考えると以下のようになります。（一部 Rails 基礎に含まれていないものも記載しています）
+
+※以下、特定の技術書を取り扱っている書店情報を投稿・検索・閲覧できるサービスとして MVP を考えたものになります。サービスによってはもっと機能が少なくても MVP となります。
+
+●MVP に含める機能
+
+- ユーザー登録機能
+- ログイン機能
+- ログアウト機能
+- 掲示板の CRUD（登録・参照・更新・削除）機能
+- 画像アップロード機能
+- コメント機能（非 ajax）
+- 検索機能
+
+●MVP 後で良い機能
+
+- ブックマーク
+- ページネーション
+- パスワードリセット
+- お問い合わせ
+- 利用規約
+- プライバシーポリシー
+- 独自ドメイン
+- ファビコン
+- OGP
+- レスポンシブ対応
+- SNS ログイン
+- Google Map
+
+●MVP 後も含めなくて良い可能性がある機能
+
+- i18n 対応
+- タイトル動的出力
+- プロフィール
+- コメント機能の ajax 化
+- 管理画面
+- 退会機能
+</aside>
+
+<aside>
+<img src="/icons/gem_red.svg" alt="/icons/gem_red.svg" width="40px" />
+
+### 名前空間`namespace`
+
+ `admin` 名前空間内のルーティングについてステップバイステップで説明します。
+
+`routes.rb`
+
+```ruby
+namespace :admin do
+  root "dashboards#index"
+  resource :dashboard, only: %i[index]
+  get 'login' => 'user_sessions#new', :as => :login
+  post 'login' => "user_sessions#create"
+  delete 'logout' => 'user_sessions#destroy', :as => :logout
+end
+
+```
+
+1. **名前空間の定義**:
+    
+    ```ruby
+    namespace :admin do
+    
+    ```
+    
+    - `namespace :admin`は、すべてのルートを `/admin` パスの下にネストします。これにより、管理者用のルートをグループ化できます。
+2. **ルートパスの設定**:
+    
+    ```ruby
+    root "dashboards#index"
+    
+    ```
+    
+    - `root "dashboards#index"`は、`/admin` にアクセスしたときに `dashboards` コントローラの `index` アクションを呼び出します。これは管理者ダッシュボードのホームページを指します。
+3. **リソースの定義**:
+    
+    ```ruby
+    resource :dashboard, only: %i[index]
+    
+    ```
+    
+    - `resource :dashboard, only: %i[index]`は、`dashboard` リソースの `index` アクションのみを定義します。resourceは単数形で、単一のリソース（例えば、1つのダッシュボード）を扱うことを示します。
+4. **ログインページのルート**:
+    
+    ```ruby
+    get 'login' => 'user_sessions#new', :as => :login
+    
+    ```
+    
+    - `get 'login' => 'user_sessions#new', :as => :login`は、`/admin/login` にアクセスしたときに `user_sessions` コントローラの `new` アクションを呼び出します。また、このルートに `login` という名前を付けます。
+5. **ログイン処理のルート**:
+    
+    ```ruby
+    post 'login' => "user_sessions#create"
+    
+    ```
+    
+    - `post 'login' => "user_sessions#create"`は、ログインフォームが送信されたときに `user_sessions` コントローラの `create` アクションを呼び出します。
+6. **ログアウトのルート**:
+    
+    ```ruby
+    delete 'logout' => 'user_sessions#destroy', :as => :logout
+    
+    ```
+    
+    - `delete 'logout' => 'user_sessions#destroy', :as => :logout`は、`/admin/logout` に対して `DELETE` リクエストが送信されたときに `user_sessions` コントローラの `destroy` アクションを呼び出します。また、このルートに `logout` という名前を付けます。
+</aside>
+
+<aside>
+<img src="/icons/gem_red.svg" alt="/icons/gem_red.svg" width="40px" />
+
+### **◆ 番外編：rails new**
+
+## アプリ作成の導入について書かれているので、アプリ開発を始めるなら必ず読みたい…!!!
+
+</aside>
+
+
+
+
+
+
+
+
+
+
+
 # RSpec入門・演習 ch.2
 
 <aside>
@@ -1110,6 +1319,10 @@ user = build(:user, name: "RUNTEQ")
 - titleが被った場合にuniqueのバリデーションが機能してinvalidになるか
 
 ### **成功パターン**
+
+
+
+
 
 失敗パターンに当てはまらない場合に成功になります。
 
