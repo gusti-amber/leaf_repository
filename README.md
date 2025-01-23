@@ -935,3 +935,52 @@ nil # p user.password
 
 
 
+## - Day: 66 - (2024/1/23)
+##### 学習時間： 4.5h（10ポモ）
+##### :small_orange_diamond:内容
+- RSpec入門・演習 ch.3 クリア！🥳
+- AP過去問道場50問（システム構成要素）
+:books: APキタミ式
+ようやくRSpec ch.3おわりました〜！ログみたらクリアまで6日かかってました😱
+他の事で時間取られてたとは言え、Rails基礎 ch.20~22はそれぞれ2,3日程度で終えてたので個人的にはこっちの方が鬼門な気がします.....!!!
+
+##### :small_orange_diamond:次回の課題
+- RSpec ch.4
+- APの勉強（過去問道場解く、キタミ式眺める）
+
+
+
+
+RSpec ch.3は実装するテスト内容が多いですが、VSCodeならGithub Copilotの自動コード修正機能を使いTab→Enterすることで、大半はAIが書いてくれます。
+自動コード修正機能は**隣接タブのファイル**や**関連のありそうなファイル**を参照しています。
+なので、既に完成させた（テストを完全にパスした）テストファイルを隣に置いておく事で、類似するテスト内容をより正確にAIが書いてくれます。
+しかし、それでもAIは誤ったコードを作成する場合もあるので、テストが通らなかった場合は、以下をGithub Copilot Chatにコピペすることで、大抵のエラー内容と修正方法は理解できます。
+ご参考までに！
+
+```bash
+#terminalLastCommand
+
+# 条件
+- あなたはRuby on Railsのエキスパートです。
+- 1つ目のRSpecエラーについて**和訳**した後、説明してください。
+- 必ず**どのファイルの何行目でどんなエラーが出ているか**を説明してください。
+- 該当エラーの解決策を提示してください。
+- 必ず**RSpecのテストファイルを修正**してください。
+- エラーを解決するためには、**どのファイルを修正すればいいのか**説明してください。
+- ファイル名は**現在いる作業ディレクトリからの相対パス**で示してください。
+
+# 出力フォーマット
+
+## 1. エラー文の提示と和訳
+### エラー文
+### 和訳
+## 2. エラーの説明
+### エラー箇所
+### 説明
+## 3. 解決策
+### 提案
+### 修正箇所
+```
+参照:
+- [コード×AIーソフトウェア開発者のための生成AI実践入門](https://www.amazon.co.jp/%E3%82%B3%E3%83%BC%E3%83%89%C3%97AI%E3%83%BC%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E9%96%8B%E7%99%BA%E8%80%85%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E7%94%9F%E6%88%90AI%E5%AE%9F%E8%B7%B5%E5%85%A5%E9%96%80-%E6%9C%8D%E9%83%A8-%E4%BD%91%E6%A8%B9-ebook/dp/B0DFW57CGY/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=2Q7LZP13CA578&dib=eyJ2IjoiMSJ9.rcN07mSkrk3R3yJufbcTT81PDp79eQet46SVXA_M-D_SR7fO4vRtAmsTmIhNTlBhgu8T6VKEg7zT3AhMbfc7FQmI1sos6o68XtaM84vl6bMg73mXNCdL8FOXuqSVp-KRugQXyWvjPWHwgtEckZGAbBmovcQLjxq3Bs2a4O5nrPL5bOsul83WIR2crK0vnxCrMuzhjrULMSyz0ZBWNkjInWSS__1kJGfrj8fBkLrHgEyTp8HlP1oe7C9b7TXIwpAKyMF2uwOnqrIFLIvSo_u3NA.XhRlQbC1KiWHT1fbgw20Za4Ui1emzHybkVtZTXiOC68&dib_tag=se&keywords=%E3%82%B3%E3%83%BC%E3%83%89+ai&qid=1737635987&sprefix=%E3%82%B3%E3%83%BC%E3%83%89+ai%2Caps%2C166&sr=8-1)
+- [GitHub Copilot in VS Code cheat sheet](https://code.visualstudio.com/docs/copilot/copilot-vscode-features#_attach-context-to-your-prompt)
