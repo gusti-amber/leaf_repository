@@ -984,3 +984,53 @@ RSpec ch.3は実装するテスト内容が多いですが、VSCodeならGithub 
 参照:
 - [コード×AIーソフトウェア開発者のための生成AI実践入門](https://www.amazon.co.jp/%E3%82%B3%E3%83%BC%E3%83%89%C3%97AI%E3%83%BC%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E9%96%8B%E7%99%BA%E8%80%85%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E7%94%9F%E6%88%90AI%E5%AE%9F%E8%B7%B5%E5%85%A5%E9%96%80-%E6%9C%8D%E9%83%A8-%E4%BD%91%E6%A8%B9-ebook/dp/B0DFW57CGY/ref=sr_1_1?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=2Q7LZP13CA578&dib=eyJ2IjoiMSJ9.rcN07mSkrk3R3yJufbcTT81PDp79eQet46SVXA_M-D_SR7fO4vRtAmsTmIhNTlBhgu8T6VKEg7zT3AhMbfc7FQmI1sos6o68XtaM84vl6bMg73mXNCdL8FOXuqSVp-KRugQXyWvjPWHwgtEckZGAbBmovcQLjxq3Bs2a4O5nrPL5bOsul83WIR2crK0vnxCrMuzhjrULMSyz0ZBWNkjInWSS__1kJGfrj8fBkLrHgEyTp8HlP1oe7C9b7TXIwpAKyMF2uwOnqrIFLIvSo_u3NA.XhRlQbC1KiWHT1fbgw20Za4Ui1emzHybkVtZTXiOC68&dib_tag=se&keywords=%E3%82%B3%E3%83%BC%E3%83%89+ai&qid=1737635987&sprefix=%E3%82%B3%E3%83%BC%E3%83%89+ai%2Caps%2C166&sr=8-1)
 - [GitHub Copilot in VS Code cheat sheet](https://code.visualstudio.com/docs/copilot/copilot-vscode-features#_attach-context-to-your-prompt)
+- 
+
+
+
+
+
+
+
+
+
+- Day: 67 - (2024/1/24)
+学習時間： 6.3h（8ポモ）
+:small_orange_diamond:内容
+Rails基礎クリア！:partying_face:
+AP過去問道場50問（システム構成要素、ソフトウェア）
+:books: APキタミ式
+ようやく中間試験入れそうです！
+最近2,3期上の人の部屋にお邪魔してお話ししたり色々情報が入って面白いです。
+noteも卒業間際、卒業済みの人が書いたのを読むと参考になることが多いと気がついたので、時間がある時に読みたいと思います:book:
+
+:small_orange_diamond:次回の課題
+rails newする
+中間試験少しずつ進める
+APの勉強（過去問道場解く、キタミ式眺める）
+
+
+
+- Day: 68~71 - (2024/1/25~28)
+学習時間： 計8.7h（17ポモ）
+:small_orange_diamond:内容
+中間試験Ruby提出
+昨日ようやく放送大関連のことが終わってこれからはカリキュラムに専念できそうです:sleeping:
+中間試験もそんなに難しく考えなければ解けそうな気がしてきました！
+
+:small_orange_diamond:次回の課題
+中間試験少しずつ進める
+APの勉強（過去問道場解く、キタミ式眺める）
+
+
+
+
+
+
+
+
+
+
+
+
+
