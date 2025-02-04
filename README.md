@@ -1062,5 +1062,24 @@ AP試験も残り76日迫ってきてるので再計画！
 
 
 
+- Day: 74~77 - (2024/1/31~2/3)
+学習時間： 計10.9h（16ポモ）
+:small_orange_diamond:内容
+中間試験Rails難航中....:thunder_cloud_and_rain:
+rails new→デプロイ完了！
+AP過去問道場問40問（セキュリティ、基礎理論・アルゴリズム）
+FE&AP勉強会
+:books: APキタミ式、Docker&仮想サーバー完全入門、［改訂新版］プロになるためのWeb技術入門
 
+Rails詰まってます.....!!:scream:
+今までgembyebugを使ってこなかったので実装時のデバッグで一苦労。
+Docker環境の場合、docker attach <コンテナ名 or コンテナID>でコンテナに接続しないとデバッグできないことが頭に入っていなかったので、色々と遠回りしてました^^;
+それと、(byebug)quitでattach状態を解除すると同時にコンテナも落ちるみたいなのでgembyebugは使いにくい:smiling_face_with_tear:
+おすすめのデバッグ方法があったら教えてほしいです...!!:bow:
+
+（60期のなかむらさんとたかさんのtimesを真似して僕もNotionでタスク管理することにしました！）
+
+:small_orange_diamond:次回の課題
+中間試験Rails Q3続き
+APの勉強（過去問道場2週目解く、キタミ式読み込む）
 
